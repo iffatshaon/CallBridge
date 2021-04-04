@@ -25,10 +25,13 @@
     "_components": [
       {
         "__id__": 6
+      },
+      {
+        "__id__": 8
       }
     ],
     "_prefab": {
-      "__id__": 7
+      "__id__": 9
     },
     "_opacity": 255,
     "_color": {
@@ -59,8 +62,8 @@
         0,
         0,
         1,
-        0.5,
-        0.5,
+        0.6,
+        0.6,
         1
       ]
     },
@@ -160,7 +163,7 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_spriteFrame": {
-      "__uuid__": "0af3e4a1-2377-4594-aee0-43682ceb2f38"
+      "__uuid__": "34b230f1-dab7-4f04-87dc-7d6187d424a2"
     },
     "_type": 1,
     "_sizeMode": 0,
@@ -226,7 +229,11 @@
     "_grayMaterial": null,
     "duration": 0.1,
     "zoomScale": 1.2,
-    "clickEvents": [],
+    "clickEvents": [
+      {
+        "__id__": 7
+      }
+    ],
     "_N$interactable": false,
     "_N$enableAutoGrayEffect": false,
     "_N$transition": 3,
@@ -294,6 +301,26 @@
     "_N$target": {
       "__id__": 2
     },
+    "_id": ""
+  },
+  {
+    "__type__": "cc.ClickEvent",
+    "target": {
+      "__id__": 1
+    },
+    "component": "",
+    "_componentId": "637c1Qp4aJE+py+4yio4+je",
+    "handler": "cardClicked",
+    "customEventData": ""
+  },
+  {
+    "__type__": "637c1Qp4aJE+py+4yio4+je",
+    "_name": "",
+    "_objFlags": 0,
+    "node": {
+      "__id__": 1
+    },
+    "_enabled": true,
     "_id": ""
   },
   {
