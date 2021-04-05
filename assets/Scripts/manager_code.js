@@ -128,6 +128,7 @@ cc.Class({
     {
         var sVal = Math.round(this.slider.getComponent(cc.Slider).progress*12+1);
         this.slider.getParent().getChildByName("callAmount").getComponent(cc.Label).string = sVal;
+        this.slider.getComponent(cc.Slider).progress = (sVal-1)/12;
     },
 
     sliderGiveCall()
@@ -252,7 +253,7 @@ cc.Class({
             boardPoints[i].push((point[i]-call[i]>=0) ? (call[i]+(point[i]-call[i])*0.2):(-call[i]));
             total[i] += boardPoints[i][boardPoints[i].length-1];
             scr.getChildByName((i+1).toString()).getComponent(cc.Label).string = boardPoints[i][boardPoints[i].length-1];
-            this.board.getChildByName("Total").getChildByName((i+1).toString()).getComponent(cc.Label).string = total[i].toFixed(1);
+            this.board.getChildByName("Total").getChildByName((i+1).toString()).getComponent(cc.Label).string = total[i].toFixed(2);
         }
         this.slider.getComponent(cc.Slider).progress = 0;
         this.slider.getParent().getChildByName("callAmount").getComponent(cc.Label).string = 1;
@@ -296,7 +297,6 @@ cc.Class({
         this.board.getChildByName("buttonContainer").zIndex = 152;
         lastWin = (Math.floor(Math.random()*4));
         boardPoints = [[],[],[],[]];
-        lastWin = (Math.floor(Math.random()*4)+1);
         this.board.active = false;
     },
     // update (dt) {},
