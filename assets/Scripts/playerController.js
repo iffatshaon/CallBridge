@@ -245,6 +245,7 @@ cc.Class({
         var c = manager.getComponent("manager_code").fCall;
         var manCards = manager.getComponent("manager_code").cards;
         var cardUsed = this.crds[this.crds.length-1+shifter];
+        var restriction;
         if(manager.getComponent("manager_code").trumped)
             restriction = ''
         else
@@ -293,7 +294,7 @@ cc.Class({
         }
         else
         {
-            cardTypeArray = this.cardDict[this.getTypeOfCard(c)];
+            var cardTypeArray = this.cardDict[this.getTypeOfCard(c)];
             if(cardTypeArray.length>0){
                 console.log("Matched type "+Math.max(...cardTypeArray))
                 var mx = manager.getComponent("manager_code").maxPlayed();
